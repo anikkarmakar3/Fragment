@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.lock.fragment.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_excersizeFragment2"
+            app:destination="@id/excersizeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/welldoneFragment"
+        android:name="com.lock.fragment.WelldoneFragment"
+        android:label="fragment_welldone"
+        tools:layout="@layout/fragment_welldone" >
+        <action
+            android:id="@+id/action_welldoneFragment_to_excersizeFragment2"
+            app:destination="@id/excersizeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelFragment"
+        android:name="com.lock.fragment.CancelFragment"
+        android:label="fragment_cancel"
+        tools:layout="@layout/fragment_cancel" >
+        <action
+            android:id="@+id/action_cancelFragment_to_excersizeFragment2"
+            app:destination="@id/excersizeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/excersizeFragment2"
+        android:name="com.lock.fragment.ExcersizeFragment2"
+        android:label="fragment_excersize2"
+        tools:layout="@layout/fragment_excersize2" >
+        <action
+            android:id="@+id/action_excersizeFragment2_to_welldoneFragment"
+            app:destination="@id/welldoneFragment" />
+        <action
+            android:id="@+id/action_excersizeFragment2_to_cancelFragment"
+            app:destination="@id/cancelFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.lock.fragment.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
